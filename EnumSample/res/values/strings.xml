@@ -1,0 +1,28 @@
+<resources>
+
+    <string name="app_name">EnumSample</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="result_code_ok">OK</string>
+    <string name="result_error_fobidden">Forbidden</string>
+    <string name="result_error_notfound">Not Found</string>
+    <string name="result_error_internalserver">Internal Server Error</string>
+    <string name="result_error_unknown">Unknown error occurred.</string>
+
+    <string name="btn_txt_ok">OK</string>
+    <string name="btn_txt_error_fobidden">エラー１</string>
+    <string name="btn_txt_error_notfound">エラー２</string>
+    <string name="btn_txt_error_internalserver">エラー３</string>
+
+    <string name="spin_product_name_eclair">Eclair（エクレア）</string>
+    <string name="spin_product_name_froyo">Frozen Yogurt（フローズンヨーグルト）</string>
+    <string name="spin_product_name_gingerbread">Gingerbread（ジンジャーブレッド）</string>
+    <string name="spin_product_name_ics">Ice Cream Sandwich（アイスクリームサンドイッチ）</string>
+
+    <string name="spin_product_price_eclair">￥210</string>
+    <string name="spin_product_price_froyo">￥220</string>
+    <string name="spin_product_price_gingerbread">￥230</string>
+    <string name="spin_product_price_ics">￥400</string>
+</resources>
