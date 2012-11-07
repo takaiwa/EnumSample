@@ -4,6 +4,7 @@ import android.content.res.Resources;
 
 public enum Sweets {
 
+    // スイーツ名, 値段
     ECLAIR(R.string.spin_product_name_eclair, R.string.spin_product_price_eclair),
     FROZEN_YOGURT(R.string.spin_product_name_froyo, R.string.spin_product_price_froyo),
     GINGERBREAD(R.string.spin_product_name_gingerbread, R.string.spin_product_price_gingerbread),

@@ -79,9 +79,12 @@ public class MainActivity extends Activity {
         switch(result) {
         // ResultCode型として判定できる↓
         case OK:
+            // なにもしない
+            break;
         case ERROR_FORBIDDEN:
         case ERROR_NOTFOUND:
         case ERROR_INTERNAL_SERVER:
+            // エラーを画面に表示
             String error_message = result.getErrorCode() + ":" + result.getMessage(resources);
             Toast.makeText(this, error_message, Toast.LENGTH_SHORT).show();
             break;
@@ -89,5 +92,18 @@ public class MainActivity extends Activity {
             Toast.makeText(this, ResultCode.ERROR_UNKNOWN.getMessage(resources), Toast.LENGTH_LONG).show();
             break;
         }
+    }
+
+    public ResultCode function() {
+
+        String page_content = null;
+
+        // .....
+
+        if(null == page_content) {
+            return ResultCode.ERROR_NOTFOUND;
+        }
+
+        return ResultCode.OK;
     }
 }
