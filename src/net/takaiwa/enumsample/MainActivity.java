@@ -12,13 +12,12 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // 押されたボタンごとにエラー表示メソッドに渡すResultCodeを変更
         ((Button)findViewById(R.id.button1)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,9 +43,11 @@ public class MainActivity extends Activity {
             }
         });
 
-
         Resources resources = this.getResources();
 
+
+        // スピナー側の処理
+        // Enumの定義を配列で取得
         final Sweets[] values = Sweets.values();
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -59,10 +60,12 @@ public class MainActivity extends Activity {
         // アダプターを設定します
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            // アイテムが選択された時
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Resources resources = MainActivity.this.getResources();
 
+                // スイーツの値段を画面に表示
                 String message = "値段:" + values[position].getPrice(resources);
                 Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
             }
@@ -94,6 +97,7 @@ public class MainActivity extends Activity {
         }
     }
 
+    // 利用していないメソッド（ブログのサンプル用）
     public ResultCode function() {
 
         String page_content = null;
